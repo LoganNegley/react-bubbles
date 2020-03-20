@@ -10,7 +10,7 @@ const [credentials, setCredentials] = useState({
   password:''
 })
   // form functions 
-  const handleChanges = event => {
+  const handleChange  = event => {
     setCredentials({...credentials,
     [event.target.name] : event.target.value})
   };
@@ -34,16 +34,16 @@ const [credentials, setCredentials] = useState({
           name='username'
           placeholder='Username'
           value={credentials.username}
-          // onChange={}
+          onChange={handleChange}
         />
         <input
           type='password'
           name='password'
           placeholder='Password'
           value={credentials.password}
-          // onChange={}
+          onChange={handleChange}
         />
-        <button>Login</button>
+        <button type='submit'>Login</button>
       </form>
     </div>
   );
