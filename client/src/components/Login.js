@@ -16,7 +16,7 @@ const [credentials, setCredentials] = useState({
   };
 
   const handleSubmit = event => {
-    axios.post('', credentials)
+    axios.post('http://localhost:5000/api/login', credentials)
     .then(response => {   
       console.log(response)
     })
