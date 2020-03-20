@@ -18,7 +18,7 @@ const [credentials, setCredentials] = useState({
   const handleSubmit = event => {
     axios.post('http://localhost:5000/api/login', credentials)
     .then(response => {   
-      console.log(response)
+      localStorage.setItem('token', response.data.payload);
     })
     .catch(error => {
       console.log(error, 'error making post request for form to the API')
