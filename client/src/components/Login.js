@@ -15,11 +15,25 @@ const [credentials, setCredentials] = useState({
     [event.target.name] : event.target.value})
   };
 
-  
+
   return (
     <div className='login-form'>
       <form>
-
+        <input
+          type='text'
+          name='username'
+          placeholder='Username'
+          value={credentials.username}
+          // onChange={}
+        />
+        <input
+          type='password'
+          name='password'
+          placeholder='Password'
+          value={credentials.password}
+          // onChange={}
+        />
+        <button>Login</button>
       </form>
     </div>
   );
