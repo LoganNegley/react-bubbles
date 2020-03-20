@@ -25,10 +25,10 @@ const [credentials, setCredentials] = useState({
     })
   };
 
-
+// Component rendered
   return (
     <div className='login-form'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type='text'
           name='username'
