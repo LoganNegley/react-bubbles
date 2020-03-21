@@ -50,10 +50,10 @@ const ColorList = ({ colors, updateColors }) => {
     .then(response => {
       console.log(response)
         axiosWithAuth()
-        .delete('http://localhost:5000/api/colors')
+        .get('http://localhost:5000/api/colors')
         .then(response =>{
           console.log(response)
-
+          updateColors(response.data)
       })
       .catch(error => {
       console.log(error, 'error getting axios get when updating colorList ')
