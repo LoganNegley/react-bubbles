@@ -20,7 +20,6 @@ const [credentials, setCredentials] = useState({
     event.preventDefault();
     axios.post('http://localhost:5000/api/login', credentials)
     .then(response => {  
-      console.log('onsubmit working') 
       window.localStorage.setItem('token', response.data.payload);
       props.history.push('/bubblePage');
     })
@@ -32,7 +31,7 @@ const [credentials, setCredentials] = useState({
 // Component rendered
   return (
     <div className='login-form'>
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           type='text'
           name='username'
@@ -47,7 +46,7 @@ const [credentials, setCredentials] = useState({
           value={credentials.password}
           onChange={handleChange}
         />
-        <button type='submit'>Login</button>
+        <button onClick={handleSubmit} type='submit'>Login</button>
       </form>
     </div>
   );
