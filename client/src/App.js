@@ -8,9 +8,6 @@ import BubblePage from '../src/components/BubblePage';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
 
     <Router>
       <div className="App">
