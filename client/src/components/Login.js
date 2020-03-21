@@ -17,8 +17,10 @@ const [credentials, setCredentials] = useState({
 
   const handleSubmit = event => {
     axios.post('http://localhost:5000/api/login', credentials)
-    .then(response => {   
-      localStorage.setItem('token', response.data.payload);
+    .then(response => {  
+      console.log('onsubmit working') 
+      window.localStorage.setItem('token', response.data.payload);
+      props.history.push('/bubblePage');
     })
     .catch(error => {
       console.log(error, 'error making post request for form to the API')

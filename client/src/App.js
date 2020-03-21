@@ -8,10 +8,14 @@ import BubblePage from '../src/components/BubblePage';
 
 function App() {
   return (
+    <div className="App">
+
+    </div>
+
     <Router>
       <div className="App">
         <Route exact path="/" component={Login} />
-        <PrivateRoute path='/bubblePage' component={BubblePage}/>
+        <PrivateRoute exact path='/bubblePage' component={BubblePage}/>
         {/* 
           Build a PrivateRoute component that will 
           display BubblePage when you're authenticated 
